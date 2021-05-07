@@ -11,14 +11,30 @@
 
 .logo img {
     width: 50%;
-    transform: translate(-20px, -10px)
+    animation: spin 10s infinite;
 }
 .logo img:hover {
-    color:blueviolet;
-    opacity:.5;
-    transform: rotate(180deg);
-    transition: all 1s ease-in-out;
+    opacity:.5; 
+    
 }
+
+@keyframes spin {
+    from {
+      transform: rotate(180deg);
+    }
+    25% {
+      transform: rotate(-180deg);
+    }
+    50% {
+      transform: translate(0px,500px);
+    }
+    75% {
+      transform: scale(.2);
+    }
+    100% {
+        opacity: .5;
+    }
+  }
 .navigation {
     display: flex;
 }
@@ -55,3 +71,4 @@ footer ul {
 footer li {
     padding: center;
 }
+
