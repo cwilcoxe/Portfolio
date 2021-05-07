@@ -8,8 +8,16 @@
     text-align:center;
 }
 
+
 .logo img {
     width: 50%;
+    transform: translate(-20px, -10px)
+}
+.logo img:hover {
+    color:blueviolet;
+    opacity:.5;
+    transform: rotate(180deg);
+    transition: all 1s ease-in-out;
 }
 .navigation {
     display: flex;
