@@ -1,74 +1,101 @@
-.inline-block {
-    display: inline-block;
-    vertical-align: top;
-}
-.logo {
-    width: 23%;
-    padding: 1%;
-    text-align:center;
-}
-
-
-.logo img {
-    width: 50%;
-    animation: spin 10s infinite;
-}
-.logo img:hover {
-    opacity:.5; 
-    
-}
-
-@keyframes spin {
-    from {
-      transform: rotate(180deg);
-    }
-    25% {
-      transform: rotate(-180deg);
-    }
-    50% {
-      transform: translate(0px,500px);
-    }
-    75% {
-      transform: scale(.2);
-    }
-    100% {
-        opacity: .5;
-    }
+* {
+    padding: 0;
+    margin: 0;
   }
-.navigation {
+  
+  /************** Header **************/
+  
+  .logo img {
+      width: 125px;
+      animation: spin 10s 1;
+  }
+  
+  .logo img:hover {
+      opacity:.5;
+  }
+  
+  header.navigation {
+    background-color: lightblue;
+    width: 100%;
     display: flex;
-}
-nav {
-    width: 73%;
-    padding: 1%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav.inline-block ul li{
+      display: inline-block;
+      padding: 20px 20px;
+  }
+  
+  /************** Footer **************/
+  
+  footer {
+      background-color: #373738;
+      color: #fff;
+      padding: 20px 20px;
+  }
+  
+  footer ul li{
+      display: inline-block;
+  }
+  
+  /************** Homepage Content **************/
+  
+  .heroImg {
+      padding: 25px;
+      width: 500px;
+      margin: 0 auto;
+      text-align: center;
+  }
+  
+  /************** Keyframes **************/
+  
+  @keyframes spin {
+      from {
+        transform: rotate(180deg);
+      }
+      25% {
+        transform: rotate(-180deg);
+      }
+      50% {
+        transform: translate(0px,500px);
+      }
+      75% {
+        transform: scale(.2);
+      }
+      100% {
+          opacity: .5;
+      }
+    }
+
+
+ /*************MySkills******Using CSS Flex*****/
+ 
+ .flexContainer {
+     display:flex;
+     flex: 33%;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     text-align: center;
+     align-items: center;
+     
+ }
+/*****MyWork using CSS Grid*******/
+.mywork {
+    grid-area: workgrid;
 }
 
-nav ul {
-    width: 50%;
-    margin-left: auto;
+.workgrid {
+   display: grid;
+   grid-template-rows: auto;
+   grid-template-columns: auto;
+   grid-template-areas: 'workgrid workgrid'
+   'workgrid workgrid'
 }
 
-.heroImg {
-    height: 600px;
-    padding: 25px;
-}
-
-.content {
-    width: 500px;
-    margin: 0 auto;
-}
-
-footer {
-    background color: #373738;
-    padding: center;
-}
-
-footer ul {
-    display: inline-block;
-    vertical-align: top;
-}
-
-footer li {
-    padding: center;
-}
-
+/****************media query************/
+ @media (max-width: 600px) {
+    .flexContainer {
+        flex-direction: column;
+    }
+ }
