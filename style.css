@@ -89,20 +89,18 @@
     align-items: center;
  }
 /*****MyWork using CSS Grid*******/
-.mywork {
-    grid-area: workgrid;
-}
+
 
 .workgrid {
    display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
    grid-template-rows: auto;
-   grid-template-columns: auto;
    grid-template-areas: 'workgrid workgrid'
    'workgrid workgrid'
 }
 
 /****************media query************/
- @media (max-width: 600px) {
+ @media (max-width: 800px) {
     .flexContainer {
         flex-direction: column;
     }
