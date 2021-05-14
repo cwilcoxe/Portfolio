@@ -90,13 +90,25 @@
  }
 /*****MyWork using CSS Grid*******/
 
+.mywork {
+  text-align: center;
+}
 
 .workgrid {
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-columns: 1fr 1fr;
    grid-template-rows: auto;
-   grid-template-areas: 'workgrid workgrid'
-   'workgrid workgrid'
+   grid-template-areas: 'govpic sniff'
+   
+}
+.govpic {
+  grid-area: govpic;
+  
+}
+
+.sniff {
+  grid-area: sniff;
+  
 }
 
 /****************media query************/
@@ -104,4 +116,13 @@
     .flexContainer {
         flex-direction: column;
     }
- }
+    .workgrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: 'govpic'
+      'sniff'
+   }
+}
+
+ 
